@@ -1,0 +1,93 @@
+\title HTML Builder
+\key("home")
+
+\large HTML Builder
+\medium What is this?
+This application reads hypertext files and generates
+html pages of them.
+Why make a converter from one hypertext
+language to another?
+Because html doesn't allow reusing hypertext through references.
+Goals of this HTML Builder include...
+\list
+...allowing repeating hypertext to be reused.
+...provide an easier syntax to markup text
+...shared meta information
+...simple notation for newlines
+...source code integration
+\end
+
+\medium Project structure
+A HTML Builder project consists of the following files:
+\list(block)
+\bold Content files
+Content files are the core of the website definition and therefore
+of the HTML Builder project.
+They contain the text and other contents that get displayed
+on the website
+
+\bold Style files
+Those define the style (layout, design) of the website.
+
+\bold Manifest file
+This file specifies what the different files in the project mean
+and how they're put together
+
+\bold Project File
+This file is always called \style("code", "\".htmlbuilder\"") .
+It represents the project and can be used to load it
+into the application. This file should not manually be modified
+and should be modified indirectly through the application.
+\end
+
+\medium Syntax and features
+\small List of \"keywords\"
+\list
+\\key
+\\title
+\\stylesheet
+\\favicon
+
+\\ref
+\\list
+\\enum
+\\end
+
+\\large
+\\medium
+\\small
+\\bold
+\\italic
+\\underscored
+\\style
+
+\\include
+\\include-dir
+\\exclude
+\\#
+\\meta
+\\default-favicon
+\\default-stylesheet
+\\img
+\\hyperlink
+
+\\project-name
+\\root
+\\build-dir
+\\manifest
+\\files
+\end
+
+\small Predefined styles
+\list
+"bold"
+"italic"
+"underscored"
+
+"large"
+"medium"
+"small"
+\end
+
+\medium Links
+\ref("html", "More about HTML")

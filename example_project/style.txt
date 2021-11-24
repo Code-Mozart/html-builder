@@ -1,0 +1,10 @@
+\key("my_style")
+
+\define
+font-family "Roboto"
+font-size 16px
+color #000000
+text-align justify
+
+\define(bold)
+font-weight bold

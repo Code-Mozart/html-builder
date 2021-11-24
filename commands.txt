@@ -1,0 +1,82 @@
+version: 24-11-21
+
+# Project ##################################################################
+
+LOAD
+   syntax:
+     load <filepath>
+   description:
+     loads a project
+   doc text:
+     todo
+
+FILES
+   syntax:
+     files
+   description:
+     lists the files in the project
+   doc text:
+     todo
+
+ADD
+   syntax:
+     add [-recursive] [-verbose] <filepath>
+   description:
+     adds files to the project
+   doc text:
+     todo
+
+todo
+REMOVE
+   syntax:
+     rm [-verbose] <filepath>
+   description:
+     removes a file or dir from the project
+   doc text:
+     todo
+
+
+# Filesystem ##############################################################
+
+DIR
+   syntax:
+     dir [<filepath>]
+   description:
+     prints all dirs and files inside a dir
+   doc text:
+     todo
+
+todo
+DELETE
+   syntax:
+     del <filepath>
+   description:
+     deletes a file or dir (with all subdirs) from the filesystem
+   doc text:
+     todo
+
+
+# Other ##################################################################
+
+EXIT
+   syntax:
+     exit
+   description:
+     exits the application
+   doc text:
+     Exits from the application.
+     All changes are immediately auto-saved so there is no need
+     and therefore no option to manually save before exiting.
+
+HELP
+   syntax:
+     help [<command>]
+   description:
+     print the documentation for the different commands
+   doc text:
+     'help' can either be called in general or for a specific command.
+     Without the additional argument it prints a list of all commands.
+     To get the documentation for a specific command on this list
+     simply type 'help <the command>'.
+     With a specific command as argument 'help' prints the documentation
+     for this command, similar to this documentation for the 'help' command.

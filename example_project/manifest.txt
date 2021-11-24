@@ -1,0 +1,15 @@
+\# CONTENT FILES
+\content(
+    "home"
+)
+
+\# META INFORMATION
+\meta("charset", "UTF-8")
+
+\# STYLE FILES
+\default-stylesheet("my_style")
+\default-favicon("favicon")
+
+\# REFERENCES
+\img("favicon", "favicon.png")
+\hyperlink("html", "en.wikipedia.org/wiki/HTML")

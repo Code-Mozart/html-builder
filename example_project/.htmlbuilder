@@ -1,0 +1,5 @@
+\project-name("example_project")
+\root("./")
+\build-dir("build/")
+\manifest(default, "manifest.txt")
+\files("./")

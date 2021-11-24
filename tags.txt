@@ -1,0 +1,138 @@
+version: 24-11-21
+
+# General #################################################################
+
+\# ... \n
+   line comment
+
+\end
+   marks the end for a block of variable length that is not closed
+   by a newline or a new paragraph,
+   see '\list'
+
+
+# Content Files ############################################################
+
+HEADER
+
+\key(<key>)
+   sets the key of this page for the project,
+   if not specified this file cannot be build
+
+\title <text> \n
+   sets the title for this page that is visible in the browser tab
+
+\stylesheet(<key>)
+   references a stylesheet,
+   the default is stylesheet is used when this tag is missing,
+   if used multiple times in one file a warning is given
+   and the first one will be used
+
+\favicon(none|<key>)
+   references a favicon (little icon in the browser tab)
+
+
+CONTENT
+
+\n
+   forces a newline,
+   alternatively newlines can be written in plain text where after
+   the first one each newline is converted as such
+
+\ref(<key>, <text>)
+   references another page (either on the same website or in the web),
+   see '\hyperlink'
+
+\list
+\list(line|block) ... \end
+   starts an unordered list where depending on the mode (line/block)
+   a new list point is started on each new line in line mode or on
+   each new paragraph in block mode,
+   if no mode is selected (no parentheses like so: \list ...) than the
+   line mode is used by default
+
+\enum
+\enum(line|block) ... \end
+   like '\list' but with an enumerated list
+
+
+STYLES
+
+\large <text> \n
+\large(<text>)
+   displays the text as a large headline
+
+\medium <text> \n
+\medium(<text>)
+   displays the text as a medium size headline
+
+\small <text> \n
+\small(<text>)
+   displays the text as a small headline
+
+\bold <text> \n
+\bold(<text>)
+\bold(block) ... \n\n
+   makes the text bold
+
+\italic <text> \n
+\italic(<text>)
+\italic(block) ... \n\n
+   makes the text italic
+
+\underscored <text> \n
+\underscored(<text>)
+\underscored(block) ... \n\n
+   underscores the text
+
+\style(<key>) <text> \n
+\style(<key>, <text>)
+\style(<key>, block) ... \n\n
+   uses the referenced style for the text,
+   see '\define'
+
+
+# Stylesheets #########################################################
+
+\key
+   see above
+
+\define
+\define(large|medium|small|bold|italic|underscored)
+\define(<key>)
+   defines either one of the default styles or a custom style,
+   if no style is specified (like so: '\define ...') then it defines
+   the style for plain text where no explicit style is specified,
+   if a style is never defined a warning is given and the default style
+   is used,
+   if a style is defined more than once also a warning is given and the first
+   definition of the style is used
+
+
+# Manifest Files ############################################################
+
+\content(<key>, ...)
+   adds a content file to the build,
+   this tag can have any number of arguments but at least one
+
+\meta(<property>, <value>)
+   adds global meta information,
+   this is translated directly to the generated HTML files
+
+\default-stylesheet(<key>)
+   sets the default stylesheet that is used in all content files
+   that do not reference a stylesheet themselves
+
+\default-favicon(<key>)
+   sets the default favicon that is used in all content files
+   that do not reference a favicon themselves,
+   when this tag is missing no favicon is used by default
+
+
+REFERENCE RESOLVING
+
+\img(<key>, <path>)
+   resolves img references
+
+\hyperlink(<key>, <url>)
+   resolves hyperlink references
